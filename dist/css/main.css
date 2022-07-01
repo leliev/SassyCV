@@ -57,6 +57,14 @@
   color: #ff652f;
   font-weight: 700;
 }
+.home__credits {
+  width: 80vw;
+  margin: 3rem auto 0 auto;
+  font-size: 1.5rem;
+}
+.home__credits > p > a:hover {
+  color: #fff;
+}
 
 .menu-btn {
   position: absolute;

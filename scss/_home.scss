@@ -25,4 +25,14 @@
       font-weight: 700;
     }
   }
+
+  &__credits {
+    width: 80vw;
+    margin: 3rem auto 0 auto;
+    font-size: 1.5rem;
+
+    & > p > a:hover {
+      color: set-text-color($primary-color);
+    }
+  }
 }
