@@ -7,6 +7,16 @@ $secondary-color: #ff652f;
   padding: 0;
 }
 
+/*Slide animations for knowledge bar*/
+@keyframes slideInt {
+  from {left: -50%;}
+  to {left: 0}
+}
+@keyframes slideBeg {
+  from {left: -25%;}
+  to {left: 0}
+}
+
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }
@@ -19,6 +29,7 @@ $secondary-color: #ff652f;
   }
 }
 
+/*Media Queries*/
 @mixin media-md {
   @media screen and (min-width: 768px) {
     @content;

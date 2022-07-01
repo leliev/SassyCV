@@ -4,6 +4,40 @@
   padding: 0;
 }
 
+/*Slide animations for knowledge bar*/
+@-webkit-keyframes slideInt {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideInt {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+@-webkit-keyframes slideBeg {
+  from {
+    left: -25%;
+  }
+  to {
+    left: 0;
+  }
+}
+@keyframes slideBeg {
+  from {
+    left: -25%;
+  }
+  to {
+    left: 0;
+  }
+}
+/*Media Queries*/
 .home {
   height: 100%;
   padding-top: 40vh;
@@ -138,6 +172,10 @@
   transition-delay: 0.55s;
 }
 
+.menu-nav__item:nth-child(5) {
+  transition-delay: 0.65s;
+}
+
 .about {
   padding-bottom: 2rem;
 }
@@ -238,6 +276,9 @@
 .projects__item:hover .projects__btn {
   opacity: 1;
 }
+.projects__item:hover .projects__label {
+  opacity: 1;
+}
 .projects__btns {
   position: absolute;
   top: 0;
@@ -256,6 +297,17 @@
 }
 .projects__btn:hover {
   color: #fff;
+}
+.projects__label {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 1;
+  opacity: 0;
+  color: #000;
+  transition: all 0.5s ease-in-out;
 }
 .projects .social-icons {
   display: flex;
@@ -298,6 +350,56 @@
   margin-top: 2rem;
 }
 
+.knowledge {
+  padding-bottom: 2rem;
+}
+.knowledge__bio-image {
+  height: 30vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url("../img/dusan-veverkolog-resized.jpg") center top;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.knowledge__bio-image .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.knowledge__items {
+  width: 60vw;
+  margin: 2rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.knowledge__item-bar {
+  border-radius: 10px;
+  background-color: #bbb;
+  overflow: hidden;
+}
+.knowledge__item-value {
+  width: 50%;
+  position: relative;
+  padding-top: 1rem;
+  background-color: #ff652f;
+  -webkit-animation: slideInt 0.7s ease-in-out;
+          animation: slideInt 0.7s ease-in-out;
+}
+.knowledge__item-value.beg {
+  width: 25%;
+  -webkit-animation: slideBeg 0.7s ease-in-out;
+          animation: slideBeg 0.7s ease-in-out;
+}
+.knowledge .social-icons {
+  display: flex;
+  flex-direction: column;
+}
+.knowledge footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}
+
 @media screen and (min-width: 768px) {
   .menu-btn {
     visibility: hidden;
@@ -332,6 +434,17 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .projects .text-secondary {
+    font-size: 3rem;
+  }
+
+  .knowledge__bio-image {
+    height: 55vh;
+  }
+  .knowledge__items {
+    width: 75vw;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .knowledge .text-secondary {
     font-size: 3rem;
   }
 
