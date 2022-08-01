@@ -90,9 +90,10 @@
         transform: translateX(0);
       }
 
-      &.active > a {
+      //Useless with barba html configuration
+      /*&.active > a {
         color: $secondary-color;
-      }
+      }*/
     }
 
     &__link {

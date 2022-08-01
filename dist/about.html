@@ -8,7 +8,7 @@
   <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
   <title>About Me</title>
 </head>
-<body>
+<body data-barba="wrapper">
   <header>
     <div class="menu-btn">
       <span class="menu-btn__burger"></span>
@@ -45,7 +45,11 @@
     </nav>
   </header>
 
-  <main>
+  <main data-barba="container" data-barba-namespace="about">
+    <div class="transition">
+      <h2>Cover Transition</h2>
+    </div>
+    
     <section class="about">
       <div class="about__bio-image">
         <div class="about__bio">
@@ -100,6 +104,8 @@
       <footer>&copy; Copyright 2022</footer>
     </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@barba/css"></script>
   <script src="https://kit.fontawesome.com/c489cd04d7.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
 </body>

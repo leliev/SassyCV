@@ -1,8 +1,34 @@
+// tell Barba to use the css plugin
+barba.use(barbaCss);
+
+// init Barba
+barba.init({
+  transitions: [
+   {
+      name:'cover',
+      to: {
+        namespace: ['home', 'knowledge', 'projects', 'about', 'contact']
+      },
+      leave() {},
+      enter() {}
+    }
+  ]
+});
+
 const menuBtn = document.querySelector('.menu-btn');
 const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.menu-nav__item');
+const navLinks = document.querySelectorAll('.menu-nav__link')
+
+//Manage links color change onclick (changed / barba)
+navLinks.forEach(item => item.addEventListener('click', changeColor));
+
+function changeColor() {
+  navLinks.forEach(item => item.style.color = '#fff');
+  this.style.color = "#ff652f";
+}
 
 let showMenu = false;
 
@@ -14,6 +40,7 @@ function toggleMenu() {
     nav.classList.add('open');
     menuNav.classList.add('open');
     navItems.forEach(item => item.classList.add('open'));
+    navLinks.forEach(item => item.addEventListener('click', toggleMenu));
 
     showMenu = true;
   } else {
@@ -21,6 +48,7 @@ function toggleMenu() {
     nav.classList.remove('open');
     menuNav.classList.remove('open');
     navItems.forEach(item => item.classList.remove('open'));
+    navLinks.forEach(item => item.removeEventListener('click', toggleMenu));
 
     showMenu = false;
   }

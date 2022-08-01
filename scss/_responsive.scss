@@ -30,7 +30,7 @@
 
   .projects {
     &__bio-image {
-      height: 40vh;
+      height: 50vh;
     }
     &__items {
       grid-template-columns: repeat(2, 1fr);
@@ -42,7 +42,7 @@
 
   .knowledge {
     &__bio-image {
-      height: 55vh;
+      height: 50vh;
     }
     &__items {
       width: 75vw;

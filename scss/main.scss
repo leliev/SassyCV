@@ -1,5 +1,39 @@
 @import 'config', 'home', 'menu', 'about', 'projects', 'contact', 'knowledge', 'responsive';
 
+.cover-leave-active,
+.cover-enter-active, 
+.cover-leave-active .transition,
+.cover-enter-active .transition {
+  transition: all 1s ease-in-out;
+}
+.cover-leave .transition {
+  transform: translateX(-100%);
+}
+.cover-leave-to .transition {
+  transform: translateX(0);
+}
+.cover-enter .transition {
+  transform: translateX(0);
+}
+.cover-enter-to .transition {
+  transform: translateX(100%);
+}
+
+.transition {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $primary-color;
+  color: $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  z-index: 10;
+}
+
 body {
   min-width: 500px;
   background: $primary-color;
