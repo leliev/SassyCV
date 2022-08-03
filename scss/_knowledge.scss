@@ -17,12 +17,24 @@
     align-items: center;
     justify-content: flex-end;
 
+    p {
+      margin-bottom: 2rem;
+    }
+
     .text-secondary {
       font-size: 2rem;
       margin-bottom: 2rem;
     }
   }
 
+  &__bio {
+    width: 80%;
+    text-align: center;
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
 
   &__items {
     width: 60vw;

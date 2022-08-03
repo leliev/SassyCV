@@ -40,4 +40,15 @@
     position: initial;
     margin-top: 2rem;
   }
+
+  &__credits {
+    width: 80vw;
+    text-align: center;
+    margin: 3rem auto 0 auto;
+    font-size: 1.5rem;
+
+    & > p > a:hover {
+      color: set-text-color($primary-color);
+    }
+  }
 }
