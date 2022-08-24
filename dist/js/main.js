@@ -20,14 +20,11 @@ const hamburger = document.querySelector('.menu-btn__burger');
 const nav = document.querySelector('.nav');
 const menuNav = document.querySelector('.menu-nav');
 const navItems = document.querySelectorAll('.menu-nav__item');
-const navLinks = document.querySelectorAll('.menu-nav__link')
+const navLinks = document.querySelectorAll('.menu-nav__link');
 
-//Manage links color change onclick (changed / barba)
-navLinks.forEach(item => item.addEventListener('click', changeColor));
-
-function changeColor() {
-  navLinks.forEach(item => item.style.color = '#fff');
-  this.style.color = "#ff652f";
+function setActive(target) {
+  navItems.forEach(item => item.classList.remove('active'));
+  target.classList.add('active')
 }
 
 let showMenu = false;

@@ -137,12 +137,12 @@
 .nav .menu-nav__item {
   transform: translateX(100vw);
   transition: all 0.5s ease-in-out;
-  /*&.active > a {
-    color: $secondary-color;
-  }*/
 }
 .nav .menu-nav__item.open {
   transform: translateX(0);
+}
+.nav .menu-nav__item.active > a {
+  color: #ff652f;
 }
 .nav .menu-nav__link {
   display: inline-block;
@@ -152,7 +152,7 @@
   font-weight: 300;
   transition: all 0.5s ease-in-out;
 }
-.nav .menu-nav__link::hover {
+.nav .menu-nav__link:hover {
   color: #ff652f;
 }
 

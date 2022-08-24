@@ -90,10 +90,9 @@
         transform: translateX(0);
       }
 
-      //Useless with barba html configuration
-      /*&.active > a {
+      &.active > a {
         color: $secondary-color;
-      }*/
+      }
     }
 
     &__link {
@@ -104,7 +103,7 @@
       font-weight: 300;
       @include transition-ease;
 
-      &::hover {
+      &:hover {
         color: $secondary-color;
       }
     }
